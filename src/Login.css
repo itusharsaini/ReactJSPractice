@@ -1,0 +1,228 @@
+div{
+    letter-spacing: 0.3em;
+    align-items: center;
+	text-align: center;
+}
+.Login {
+    margin: 0px;
+    height: 600px;
+    padding: 10px;
+}
+
+.imgTag{
+    margin-bottom: 10px;
+}
+
+.form {
+    width: max-content;
+    margin-left: 35%;
+    margin-top: 7%;
+}
+
+.innerFormDiv {
+    box-shadow: -1px -1px 12px 0px rgb(249, 249, 249);
+    background-color: transparent;
+    width: max-content;
+    height: 300px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    text-shadow: 2px 1px 3px  rgb(184, 160, 189);
+    border: thin solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+input{
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 5px;
+    font-size: medium;
+    border: thin solid black;
+    height: 30px;
+    border-radius: 2px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+}
+
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 0px;
+    box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+    border-color: rgba(152, 160, 180, 10);
+}
+
+.inputDiv{
+    padding-right: 10px;
+}
+
+.emailDiv,.passDiv{
+    text-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+    height: 30px;
+    letter-spacing: 0.2em;
+	align-items: center;
+}
+
+
+button{
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    height: 30px;
+    margin-top: 10px;
+    border: thin;
+    border-radius: 2px;
+    overflow: hidden;
+	box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+	z-index: -2;
+}
+
+.fill-one {
+	background-image: linear-gradient(to right, #E040FB, #00BCD4);
+	height: 300px;
+	margin: -40px 0 0 -140px;
+	z-index: -1;
+	transition: all 0.4s ease;
+}
+
+.fill-two {
+	background-image: linear-gradient(to right, #E040FB, #00BCD4);
+	background-size: 150% 150%;
+	height: 300px;
+	width: 470px;
+	margin: -40px 0 0 -140px;
+	z-index: -1;
+	transition: all 0.4s ease;
+}
+
+.container-one:hover .fill-one {
+
+	transform: translateX(100px);
+}
+
+.container-two:hover .fill-two {
+	animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .imgTag {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+
+
+@media only screen and (min-width: 600px) {
+
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+
+    .col-s-2 {
+        width: 16.66%;
+    }
+
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33%;
+    }
+
+    .col-s-5 {
+        width: 41.66%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33%;
+    }
+
+    .col-s-8 {
+        width: 66.66%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33%;
+    }
+
+    .col-s-11 {
+        width: 91.66%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
