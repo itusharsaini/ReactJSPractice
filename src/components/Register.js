@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import { firebaseApp } from '../firebase';
 import logo from './logo.svg';
