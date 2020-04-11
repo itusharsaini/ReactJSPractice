@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import { firebaseApp } from '../firebase';
+import {browserHistory} from 'react-router';
 import logo from './logo.svg';
 import './Register.css';
 
@@ -128,7 +129,7 @@ class Register extends Component {
                         </span>
 
                         <span className="btn-span">
-                            <button  onClick={() => { window.location = '/' }} type="button">Login
+                            <button  onClick={() => { browserHistory.push('/') }} type="button">Login
                                 
                             </button>
                         </span>
