@@ -1,0 +1,37 @@
+.goal-item-container{
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.438);
+}
+
+th, td{
+    text-align: justify;
+    margin: 1px;
+    padding: 10px;
+}
+
+.comp-btn {
+    border-radius: 50%;
+    width: max-content;
+}
+
+.tick-logo{
+    margin-top: 3px;
+}
+
+.tick-logo:hover{
+    background-color:rgb(255, 255, 255);
+}
+
+.btn-row{
+   text-align: center;
+}
+
+.btn-row :hover{
+    background-color: rgba(255, 255, 255, 0.466);
+}
+
+.btn-row :active{
+    background-color: transparent;
+}
+
+

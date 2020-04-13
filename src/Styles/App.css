@@ -1,0 +1,92 @@
+.App {
+  text-align: center;
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+.container {
+  height: 720px;
+  background-image: url("../assets/background.jpg");
+  background-repeat: repeat-y;
+}
+
+.header {
+  padding: 10px;
+  color: white;
+  box-shadow: -1px -1px 40px 10px rgba(0, 0, 0, 0.507);
+  display: inline-block;
+  position: absolute;
+  backdrop-filter: opacity(0.5);
+  border-radius: 2px;
+  letter-spacing: 0.13em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  left: 20%;
+  right: 20%;
+}
+
+.logout-btn {
+  background-color: rgba(0, 0, 0, 0.438);
+  border: none;
+  float: right;
+}
+
+.logout-btn:hover {
+  background-color: rgba(0, 81, 128, 0.438);
+
+}
+
+.logout-btn:active {
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  font-size: small;
+  margin: 5px;
+  color: #282c34;
+}
+
+fieldset {
+  border-radius: 2px;
+  border: thin solid rgba(152, 160, 180, 10);
+  background: transparent;
+  margin-top: 5px;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
