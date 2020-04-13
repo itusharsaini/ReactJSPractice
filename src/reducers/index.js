@@ -1,18 +1,10 @@
-import { SIGNED_IN } from '../constants';
+import { combineReducers } from 'redux';
+import reducerUser from './reducerUser';
+import reducerGoals from './reducerGoals';
+import completeGoals from './reducerCompletedGoals';
 
-let user = {
-    email: null
-}
-
-export default (state = user, action) => {
-    switch (action.type) {
-        case SIGNED_IN:
-            const { email } = action;
-            user = {
-                email
-            }
-            return user;
-        default:
-            return state;    
-    }
-}
+export default combineReducers({
+    user: reducerUser,
+    goals: reducerGoals,
+    completeGoals: completeGoals
+})
