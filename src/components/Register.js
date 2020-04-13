@@ -3,8 +3,8 @@
 import React, { Component } from 'react';
 import { firebaseApp } from '../firebase';
 import {browserHistory} from 'react-router';
-import logo from './logo.svg';
-import './Register.css';
+import logo from '../assets/logo.svg';
+import '../Styles/Register.css';
 
 //!RegExp for email validation
 const validEmailRegex = RegExp(/([a-z]+(?:[\.\w-]+)*@[a-z](?:[\w-]+\.){1,2}[a-z]{2,4})/gi);
