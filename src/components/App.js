@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { firebaseApp } from '../firebase';
 import './App.css';
 import { connect } from 'react-redux';
-import { Navbar } from 'react-bootstrap';
+
+import AddGoal from './AddGoal';
+import GoalList from './GoalList';
+import CompletedGoalList from './CompletedGoalList'
 
 
 function signOut() {
@@ -19,12 +22,20 @@ const navbar = (
     <div className="header">
       <h2 className="wlc-header">
         Logo
-        <a href="#">Contact</a>
-          <a href="#">About</a>
-            <button className="logout-btn"
-              onClick={() => signOut()}> Logout
+            <button
+          className="logout-btn"
+          onClick={() => signOut()}>
+          Logout
             </button>
       </h2>
+      <AddGoal />
+      <hr />
+      <h4>Goals</h4>
+      <GoalList />
+      <hr />
+      <h4>Completed Goals</h4>
+      <CompletedGoalList />
+      <hr />
     </div>
   </div>
 );
