@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { goalRef } from '../firebase';
 import { connect } from 'react-redux';
 
+import '../Styles/AddGoal.css';
+
 class AddGoal extends Component {
     constructor(props) {
         super(props);
@@ -20,23 +22,22 @@ class AddGoal extends Component {
 
     render() {
         return (
-            <div className="form-inline">
-                <div className="form-group">
+            <div className="goal-main-div col-12 col-s-12 col-xs-12">
+                <fieldset>
+                <legend>Add new goal</legend>
                     <input
                         type="text"
                         placeholder="Add a goal"
-                        className="form-control"
-                        style={{ marginRight: '5px' }}
+                        className="col-12 col-s-12 col-xs-12 inp-field"
                         onChange={event => this.setState({ title: event.target.value })}
                     />
-                    <button className="btn btn-sm btn-success"
+                    <button className="col-2 col-xs-2 col-s-12 submit-btn"
                         type="button"
                         onClick={() => this.addGoal()}
                     >
                         Submit
-                    </button>
-                </div>
-
+           </button>
+                </fieldset>
 
             </div>
         )
