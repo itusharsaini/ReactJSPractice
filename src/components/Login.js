@@ -1,9 +1,9 @@
 /* eslint-disable no-useless-escape */
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
-import logo from './logo.png';
+import logo from '../assets/logo.png';
 import { firebaseApp } from '../firebase';
-import './Login.css';
+import '../Styles/Login.css';
 import { browserHistory } from 'react-router';
 
 
