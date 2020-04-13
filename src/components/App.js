@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { firebaseApp } from '../firebase';
-import './App.css';
+import '../Styles/App.css';
 import { connect } from 'react-redux';
+
+import avatar from '../assets/avatar.png';
 
 import AddGoal from './AddGoal';
 import GoalList from './GoalList';
@@ -21,21 +23,28 @@ const navbar = (
   <div className="container" >
     <div className="header">
       <h2 className="wlc-header">
-        Logo
-            <button
-          className="logout-btn"
+        <img src={avatar} height="80" alt="avatar" />
+        <button
+          className="btn btn-sm btn-dark logout-btn"
           onClick={() => signOut()}>
           Logout
             </button>
       </h2>
-      <AddGoal />
       <hr />
-      <h4>Goals</h4>
-      <GoalList />
-      <hr />
-      <h4>Completed Goals</h4>
-      <CompletedGoalList />
-      <hr />
+
+      <fieldset>
+
+        <legend>Goal Summary</legend>
+
+        <AddGoal />
+
+        <GoalList />
+
+        <div>Completed Goals</div>
+        <CompletedGoalList />
+
+      </fieldset>
+
     </div>
   </div>
 );
