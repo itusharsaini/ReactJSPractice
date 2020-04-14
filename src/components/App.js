@@ -40,7 +40,6 @@ const navbar = (
 
         <GoalList />
 
-        <div>Completed Goals</div>
         <CompletedGoalList />
 
       </fieldset>
