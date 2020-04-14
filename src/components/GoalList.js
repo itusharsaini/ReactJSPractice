@@ -3,11 +3,10 @@ import { goalRef, completeGoalRef } from '../firebase';
 import { setGoals } from '../actions';
 import { connect } from 'react-redux';
 
-
 import tick from '../assets/tick.png';
 import '../Styles/GoalList.css';
 
-let emailList = new Map();
+let testList = [];
 class GoalList extends Component {
 
     componentDidMount() {
@@ -29,55 +28,54 @@ class GoalList extends Component {
     }
 
     completeGoal = (event) => {
-        console.log('eventClick', event.rowIndex);
-        const { email,title, serverKey } = emailList.get(event.target.rowIndex);
+        const rowIndex = event.target.parentNode.parentNode.rowIndex;
+        //console.log('testtList', testList[rowIndex-1]);
+        const { email, title, serverKey } = testList[rowIndex - 1];
         //console.log('email', email, 'title', title, 'serverKey',serverKey);
         goalRef.child(serverKey).remove();
         completeGoalRef.push({ email, title });
     }
 
-
-
     render() {
         console.log('this.props.goals', this.props.goals);
-
         return (
             <div>
                 <fieldset>
                     <legend>Goals(pending/new)</legend>
                     <table>
-                        <tr>
-                            <th>Sr.No.</th>
-                            <th>Title</th>
-                            <th>Submitted by</th>
-                            <th>Mark Complete</th>
-                        </tr>
-
+                        <thead>
+                            <tr>
+                                <th>Sr.No.</th>
+                                <th>Title</th>
+                                <th>Submitted by</th>
+                                <th>Mark Complete</th>
+                            </tr>
+                        </thead>
                         {this.props.goals.map((goal, index) => {
-                            emailList.set(index, [ goal.email, goal.title, goal.serverKey ]);
-                            console.log('map', emailList);
+                            testList.push({ email: goal.email, title: goal.title, serverKey: goal.serverKey });
                             return (
                                 //!<div key={index}> {goal.title}</div>
-                                <tr>
-                                    <td>{index}</td>
-                                    <td>{goal.title}</td>
-                                    <td><em>{goal.email}</em></td>
-                                    <td className="btn-row">
-                                        <button
-                                            className="comp-btn"
-                                            onClick={this.completeGoal}
-                                        >
-                                            <img className="tick-logo" src={tick} height="20" alt="Complete" />
-                                        </button>
-                                    </td>
-                                </tr>
+                                <tbody key={index}>
+                                    <tr>
+                                        <td>{index + 1}</td>
+                                        <td>{goal.title}</td>
+                                        <td><em>{goal.email}</em></td>
+                                        <td className="btn-row">
+                                            <button
+                                                className="comp-btn"
+                                                onClick={this.completeGoal}
+                                            >   
+                                                <i className="fa fa-check-circle"></i>
+                                                Complete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
                             )
                         })
                         }
                     </table>
-
                 </fieldset>
-
             </div>
         )
     }
